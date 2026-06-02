@@ -4,7 +4,7 @@
 # The import of the random module
 import random
 
-# Intro and Instructions to the program
+# Intro and Instructions to the program / game
 print("Hello and welcome to RNG Game press Enter / Return")
 input()
 print("🔴 INSTRUCTIONS 🔴")
@@ -12,10 +12,10 @@ print(" You need to get the same pair of numbers on top of each other to win! ")
 print("Press Enter / Return to start the game ")
 input()
 
-# Generate the first random pair numbers from between one and ten
+# Generate the first random pair numbers from between one and any number
 first_num = random.randint(1, 10)
 
-# Generate the second random pair numbers between one and ten
+# Generate the second random pair numbers between one and any number
 second_num = random.randint(1, 10)
 
 reset_game = True
@@ -25,11 +25,12 @@ while True:
     if first_num == 10 and second_num == 10 and reset_game == True:
         print("Congratulations")
         input()
-        print("You beat my game once hwo many times you can you beat it?")
+        print("You beat my game")
         reset_game = True
     else:
         # Prints out the first and second set of random numbers
-        print("You got 🥁")
+        print("The numbers you got is ...")
+        input()
         print(first_num)
         print(second_num)
         
@@ -41,10 +42,10 @@ while True:
             second_num = random.randint(1, 10)
 
     # Ask the user for a re-roll
-    reroll = input("You want to reroll that? (y/n) ").lower()
+    reroll = input("You want to get a reroll? (y/n) ").lower()
 
     if reroll == "n":
-        print("Thanks for playing my RNG game")
+        print("Bye but thanks for playing my RNG game")
         
         # Breaks out of the loop
         break
